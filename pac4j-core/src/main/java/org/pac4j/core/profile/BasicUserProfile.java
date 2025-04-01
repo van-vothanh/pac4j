@@ -20,6 +20,7 @@ import java.util.stream.Collectors;
  */
 public class BasicUserProfile implements UserProfile, Externalizable {
 
+    @Serial
     private static final long serialVersionUID = 9020114478664816338L;
 
     protected transient final Logger logger = LoggerFactory.getLogger(getClass());
@@ -259,10 +260,10 @@ public class BasicUserProfile implements UserProfile, Externalizable {
      */
     public List<String> extractAttributeValues(String name) {
         final Object value = getAttribute(name);
-        if (value instanceof String) {
-            return Collections.singletonList((String) value);
-        } else if (value instanceof String[]) {
-            return Arrays.asList((String[]) value);
+        if (value instanceof String string) {
+            return Collections.singletonList(string);
+        } else if (value instanceof String[] strings) {
+            return Arrays.asList(strings);
         } else if (value instanceof List) {
             return (List<String>) value;
         } else {

@@ -2,6 +2,7 @@ package org.pac4j.oauth.profile.github;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -12,6 +13,7 @@ import java.io.Serializable;
  */
 public final class GitHubPlan implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = -4718500186419958716L;
 
     private String name;

@@ -33,12 +33,12 @@ public class DefaultAjaxRequestResolver implements AjaxRequestResolver, HttpCons
         String url = null;
         if (addRedirectionUrlAsHeader) {
             final RedirectionAction action = redirectionActionBuilder.getRedirectionAction(context).orElse(null);
-            if (action instanceof WithLocationAction) {
-                url = ((WithLocationAction) action).getLocation();
+            if (action instanceof WithLocationAction locationAction) {
+                url = locationAction.getLocation();
             }
         }
 
-        if (!context.getRequestParameter(FACES_PARTIAL_AJAX_PARAMETER).isPresent()) {
+        if (context.getRequestParameter(FACES_PARTIAL_AJAX_PARAMETER).isEmpty()) {
             if (CommonHelper.isNotBlank(url)) {
                 context.setResponseHeader(HttpConstants.LOCATION_HEADER, url);
             }

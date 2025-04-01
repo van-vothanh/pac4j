@@ -1,5 +1,7 @@
 package org.pac4j.core.exception;
 
+import java.io.Serial;
+
 /**
  * This class represents the root technical exception for the library.
  * 
@@ -7,7 +9,8 @@ package org.pac4j.core.exception;
  * @since 1.3.0
  */
 public class TechnicalException extends RuntimeException {
-    
+
+    @Serial
     private static final long serialVersionUID = 536639932593211210L;
     
     public TechnicalException(final String message) {

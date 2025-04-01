@@ -1,5 +1,6 @@
 package org.pac4j.oauth.profile.yahoo;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -10,6 +11,7 @@ import java.io.Serializable;
  */
 public final class YahooEmail implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 1195905995057732685L;
 
     private Integer id;

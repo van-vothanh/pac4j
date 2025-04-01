@@ -60,8 +60,9 @@ public final class RestAuthenticatorIT implements TestsConstants {
         final RestAuthenticator authenticator = new RestAuthenticator("http://localhost:" + PORT + "?r=pe");
         final UsernamePasswordCredentials credentials = new UsernamePasswordCredentials(GOOD_USERNAME, PASSWORD);
         TestsHelper.expectException(() -> authenticator.validate(credentials, MockWebContext.create()), TechnicalException.class,
-            "com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'bad': was expecting ('true', 'false' or 'null')\n"
-            + " at [Source: (String)\"bad\"; line: 1, column: 7]");
+            """
+            com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'bad': was expecting ('true', 'false' or 'null')
+             at [Source: (String)"bad"; line: 1, column: 7]""");
     }
 
     @Test

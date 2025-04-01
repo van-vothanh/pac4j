@@ -98,7 +98,7 @@ public class DefaultLogoutHandler<C extends WebContext> extends ProfileManagerFa
     public void destroySessionBack(final C context, final String key) {
         final Optional<Object> optTrackableSession = store.get(key);
         logger.debug("key: {} -> trackableSession: {}", key, optTrackableSession);
-        if (!optTrackableSession.isPresent()) {
+        if (optTrackableSession.isEmpty()) {
             logger.error("No trackable session found for back channel logout. Either the session store does not support to track session "
                 + "or it has expired from the store and the store settings must be updated (expired data)");
         } else {

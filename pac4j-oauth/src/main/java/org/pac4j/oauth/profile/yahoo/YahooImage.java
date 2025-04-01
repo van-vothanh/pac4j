@@ -1,5 +1,6 @@
 package org.pac4j.oauth.profile.yahoo;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -10,6 +11,7 @@ import java.io.Serializable;
  */
 public final class YahooImage implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 5378229852266815223L;
 
     private String imageUrl;

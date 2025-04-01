@@ -39,8 +39,8 @@ public final class JsonConverter<T extends Object> implements AttributeConverter
                 return (T) attribute;
             } else if (attribute instanceof String || attribute instanceof JsonNode) {
                 final String s;
-                if (attribute instanceof String) {
-                    s = (String) attribute;
+                if (attribute instanceof String string) {
+                    s = string;
                 } else {
                     s = JsonHelper.toJSONString(attribute);
                 }

@@ -19,8 +19,7 @@ public class CasAuthenticationDateFormatter extends DateConverter {
     @Override
     public Date convert(final Object attribute) {
         Object a = attribute;
-        if (a instanceof String) {
-            String s = (String) a;
+        if (a instanceof String s) {
             int pos = s.lastIndexOf("[");
             if (pos > 0) {
                 s = s.substring(0, pos);

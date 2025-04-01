@@ -49,7 +49,7 @@ public final class CasProxyReceptor extends IndirectClient<TokenCredentials> {
             final Optional<String> proxyGrantingTicket = ctx.getRequestParameter(PARAM_PROXY_GRANTING_TICKET);
             logger.debug("proxyGrantingTicket: {}", proxyGrantingTicket);
 
-            if (!proxyGrantingTicket.isPresent() || !proxyGrantingTicketIou.isPresent()) {
+            if (proxyGrantingTicket.isEmpty() || proxyGrantingTicketIou.isEmpty()) {
                 logger.warn("Missing proxyGrantingTicket or proxyGrantingTicketIou -> returns ok");
                 throw new OkAction("");
             }

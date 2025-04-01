@@ -1,5 +1,7 @@
 package org.pac4j.core.exception;
 
+import java.io.Serial;
+
 /**
  * This class represents an exception which can happen during HTTP communication (with status code and message body).
  * 
@@ -7,7 +9,8 @@ package org.pac4j.core.exception;
  * @since 1.3.0
  */
 public class HttpCommunicationException extends CommunicationException {
-    
+
+    @Serial
     private static final long serialVersionUID = -7972641539531738263L;
     
     private final int code;

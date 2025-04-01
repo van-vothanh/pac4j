@@ -14,8 +14,8 @@ public final class FacebookRelationshipStatusConverter implements AttributeConve
     @Override
     public FacebookRelationshipStatus convert(final Object attribute) {
         if (attribute != null) {
-            if (attribute instanceof String) {
-                String s = ((String) attribute).toLowerCase();
+            if (attribute instanceof String string) {
+                String s = string.toLowerCase();
                 s = s.replaceAll("_", " ");
                 s = s.replaceAll("'", "");
                 if ("single".equals(s)) {
@@ -41,8 +41,8 @@ public final class FacebookRelationshipStatusConverter implements AttributeConve
                 } else if ("in a domestic partnership".equals(s)) {
                     return FacebookRelationshipStatus.IN_A_DOMESTIC_PARTNERSHIP;
                 }
-            } else if (attribute instanceof FacebookRelationshipStatus) {
-                return (FacebookRelationshipStatus) attribute;
+            } else if (attribute instanceof FacebookRelationshipStatus status) {
+                return status;
             }
         }
         return null;

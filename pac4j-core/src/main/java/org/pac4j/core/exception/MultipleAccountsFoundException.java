@@ -1,5 +1,7 @@
 package org.pac4j.core.exception;
 
+import java.io.Serial;
+
 /**
  * Exception when multiple accounts are found.
  *
@@ -8,6 +10,7 @@ package org.pac4j.core.exception;
  */
 public class MultipleAccountsFoundException extends TechnicalException {
 
+    @Serial
     private static final long serialVersionUID = 1430582289490541876L;
 
     public MultipleAccountsFoundException(final String message) {

@@ -5,6 +5,8 @@ import org.openid4java.message.ParameterList;
 import org.pac4j.core.credentials.Credentials;
 import org.pac4j.core.util.CommonHelper;
 
+import java.io.Serial;
+
 /**
  * This class represents an OpenID credentials with the discovery information, the list of parameters returned by the provider and the
  * client type.
@@ -14,6 +16,7 @@ import org.pac4j.core.util.CommonHelper;
  */
 public class OpenIdCredentials extends Credentials {
 
+    @Serial
     private static final long serialVersionUID = -5934736541999523245L;
 
     private ParameterList parameterList;

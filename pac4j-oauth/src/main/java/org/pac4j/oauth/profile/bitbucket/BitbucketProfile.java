@@ -2,6 +2,7 @@ package org.pac4j.oauth.profile.bitbucket;
 
 import org.pac4j.oauth.profile.OAuth10Profile;
 
+import java.io.Serial;
 import java.net.URI;
 
 /**
@@ -12,7 +13,8 @@ import java.net.URI;
  * @since 1.5.1
  */
 public class BitbucketProfile extends OAuth10Profile {
-    
+
+    @Serial
     private static final long serialVersionUID = -8943779913358140436L;
 
     @Override

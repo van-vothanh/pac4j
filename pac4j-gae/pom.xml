@@ -14,6 +14,7 @@
 
     <properties>
         <gae.version>1.9.82</gae.version>
+    <java.version>21</java.version>
         <jsr107cache.version>1.1</jsr107cache.version>
     </properties>
 

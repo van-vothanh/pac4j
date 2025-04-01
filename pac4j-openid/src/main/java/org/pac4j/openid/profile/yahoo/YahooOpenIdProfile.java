@@ -1,5 +1,6 @@
 package org.pac4j.openid.profile.yahoo;
 
+import java.io.Serial;
 import java.net.URI;
 import java.util.Locale;
 
@@ -14,7 +15,8 @@ import org.pac4j.openid.profile.OpenIdProfile;
  * @since 1.6.0
  */
 public class YahooOpenIdProfile extends OpenIdProfile {
-    
+
+    @Serial
     private static final long serialVersionUID = 7866288887408897456L;
 
     @Override

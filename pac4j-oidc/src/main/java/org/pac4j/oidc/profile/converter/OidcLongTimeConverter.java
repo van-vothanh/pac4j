@@ -14,8 +14,7 @@ public class OidcLongTimeConverter implements AttributeConverter<Date> {
 
     @Override
     public Date convert(final Object attribute) {
-        if (attribute instanceof Long) {
-            final long seconds = (Long) attribute;
+        if (attribute instanceof Long seconds) {
             return new Date(seconds * 1000);
         }
         return null;

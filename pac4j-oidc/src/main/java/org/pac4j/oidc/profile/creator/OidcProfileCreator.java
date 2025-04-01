@@ -105,9 +105,9 @@ public class OidcProfileCreator<P extends OidcProfile> extends ProfileDefinition
                         httpResponse.getContent());
 
                 final UserInfoResponse userInfoResponse = UserInfoResponse.parse(httpResponse);
-                if (userInfoResponse instanceof UserInfoErrorResponse) {
+                if (userInfoResponse instanceof UserInfoErrorResponse response) {
                     logger.error("Bad User Info response, error={}",
-                            ((UserInfoErrorResponse) userInfoResponse).getErrorObject());
+                            response.getErrorObject());
                 } else {
                     final UserInfoSuccessResponse userInfoSuccessResponse = (UserInfoSuccessResponse) userInfoResponse;
                     final JWTClaimsSet userInfoClaimsSet;

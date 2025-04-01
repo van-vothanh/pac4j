@@ -2,6 +2,7 @@ package org.pac4j.oauth.profile.google2;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -12,6 +13,7 @@ import java.io.Serializable;
  */
 public final class Google2Email implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 3273984944635729083L;
 
     @JsonProperty("value")

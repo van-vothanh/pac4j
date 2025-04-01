@@ -4,6 +4,8 @@ import com.github.scribejava.core.model.OAuth1AccessToken;
 import com.github.scribejava.core.model.OAuth1RequestToken;
 import org.pac4j.core.util.CommonHelper;
 
+import java.io.Serial;
+
 /**
  * This class represents an OAuth credentials for OAuth 1.0 a request token, a token and a verifier.
  *
@@ -12,6 +14,7 @@ import org.pac4j.core.util.CommonHelper;
  */
 public class OAuth10Credentials extends OAuthCredentials {
 
+    @Serial
     private static final long serialVersionUID = -167715058574799025L;
     private OAuth1RequestToken requestToken;
 

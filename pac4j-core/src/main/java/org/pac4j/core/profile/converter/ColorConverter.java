@@ -20,8 +20,7 @@ public final class ColorConverter extends AbstractAttributeConverter<Color> {
 
     @Override
     protected Color internalConvert(final Object attribute) {
-        if (attribute instanceof String) {
-            final String s = (String) attribute;
+        if (attribute instanceof String s) {
             if (s.length() == 6) {
                 try {
                     String hex = s.substring(0, 2);

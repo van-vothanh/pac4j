@@ -1,5 +1,6 @@
 package org.pac4j.oauth.profile.facebook;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -10,6 +11,7 @@ import java.io.Serializable;
  */
 public class FacebookObject implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 7393867411970930893L;
 
     private String id;

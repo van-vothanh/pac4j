@@ -2,6 +2,8 @@ package org.pac4j.http.profile;
 
 import org.pac4j.core.profile.CommonProfile;
 
+import java.io.Serial;
+
 /**
  * Profile for X509 certificate authentication.
  *
@@ -10,5 +12,6 @@ import org.pac4j.core.profile.CommonProfile;
  */
 public class X509Profile extends CommonProfile {
 
+    @Serial
     private static final long serialVersionUID = -7596662147066025651L;
 }

@@ -14,8 +14,8 @@ public final class IntegerConverter extends AbstractAttributeConverter<Integer> 
 
     @Override
     protected Integer internalConvert(final Object attribute) {
-        if (attribute instanceof String) {
-            return Integer.parseInt((String) attribute);
+        if (attribute instanceof String string) {
+            return Integer.parseInt(string);
         }
         return null;
     }

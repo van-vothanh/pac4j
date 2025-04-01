@@ -1,5 +1,6 @@
 package org.pac4j.oauth.profile.paypal;
 
+import java.io.Serial;
 import java.util.Locale;
 
 import org.pac4j.oauth.profile.OAuth20Profile;
@@ -12,7 +13,8 @@ import org.pac4j.oauth.profile.OAuth20Profile;
  * @since 1.4.2
  */
 public class PayPalProfile extends OAuth20Profile {
-    
+
+    @Serial
     private static final long serialVersionUID = -9019988559486637233L;
 
     @Override

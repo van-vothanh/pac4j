@@ -59,8 +59,8 @@ public class FromAttributesAuthorizationGenerator implements AuthorizationGenera
         for (final String attribute : attributes) {
             final Object value = profile.getAttribute(attribute);
             if (value != null) {
-                if (value instanceof String) {
-                    final StringTokenizer st = new StringTokenizer((String) value, this.splitChar);
+                if (value instanceof String string) {
+                    final StringTokenizer st = new StringTokenizer(string, this.splitChar);
                     while (st.hasMoreTokens()) {
                         addRoleOrPermissionToProfile(profile, st.nextToken(), isRole);
                     }

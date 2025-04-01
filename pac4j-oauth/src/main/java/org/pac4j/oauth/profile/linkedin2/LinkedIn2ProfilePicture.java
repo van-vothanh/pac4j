@@ -1,6 +1,7 @@
 package org.pac4j.oauth.profile.linkedin2;
 
 import java.io.IOException;
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Arrays;
 
@@ -14,12 +15,15 @@ import com.fasterxml.jackson.databind.util.TokenBuffer;
  * @since 3.8.0
  */
 public class LinkedIn2ProfilePicture implements Serializable {
+    @Serial
     private static final long serialVersionUID = 100L;
 
     public static class DisplayImageTilde implements Serializable {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         public static class Paging implements Serializable {
+            @Serial
             private static final long serialVersionUID = 1L;
 
             private int count;
@@ -52,20 +56,24 @@ public class LinkedIn2ProfilePicture implements Serializable {
 
             @Override
             public String toString() {
-                return String.format("{count: %d, start: %d, links.length: %s}", count, start, Arrays.asList(links));
+                return "{count: %d, start: %d, links.length: %s}".formatted(count, start, Arrays.asList(links));
             }
         }
 
         public static class Element implements Serializable {
+            @Serial
             private static final long serialVersionUID = 1L;
 
             public static class Data implements Serializable {
+                @Serial
                 private static final long serialVersionUID = 1L;
 
                 public static class StillImage implements Serializable {
+                    @Serial
                     private static final long serialVersionUID = 1L;
 
                     public static class Size implements Serializable {
+                        @Serial
                         private static final long serialVersionUID = 1L;
 
                         private int width;
@@ -88,16 +96,17 @@ public class LinkedIn2ProfilePicture implements Serializable {
                         }
 
                         protected String getBaseString() {
-                            return String.format("width: %d, height: %d", width, height);
+                            return "width: %d, height: %d".formatted(width, height);
                         }
 
                         @Override
                         public String toString() {
-                            return String.format("{%s}", getBaseString());
+                            return "{%s}".formatted(getBaseString());
                         }
                     }
 
                     public static class DisplaySize extends Size implements Serializable {
+                        @Serial
                         private static final long serialVersionUID = 1L;
 
                         private String uom;
@@ -112,11 +121,12 @@ public class LinkedIn2ProfilePicture implements Serializable {
 
                         @Override
                         public String toString() {
-                            return String.format("{%s, uom: %s}", getBaseString(), uom);
+                            return "{%s, uom: %s}".formatted(getBaseString(), uom);
                         }
                     }
 
                     public static class AspectRatio implements Serializable {
+                        @Serial
                         private static final long serialVersionUID = 1L;
 
                         private double widthAspect;
@@ -149,12 +159,13 @@ public class LinkedIn2ProfilePicture implements Serializable {
 
                         @Override
                         public String toString() {
-                            return String.format("{widthAspect: %g, heightAspect: %s, formatted: %s}", widthAspect, heightAspect,
-                                    formatted);
+                            return "{widthAspect: %g, heightAspect: %s, formatted: %s}".formatted(widthAspect, heightAspect,
+                                formatted);
                         }
                     }
 
                     public static class RawCodecSpec implements Serializable {
+                        @Serial
                         private static final long serialVersionUID = 1L;
 
                         private String name;
@@ -178,7 +189,7 @@ public class LinkedIn2ProfilePicture implements Serializable {
 
                         @Override
                         public String toString() {
-                            return String.format("{name: %s, type: %s}", name, type);
+                            return "{name: %s, type: %s}".formatted(name, type);
                         }
                     }
 
@@ -261,11 +272,12 @@ public class LinkedIn2ProfilePicture implements Serializable {
 
                 @Override
                 public String toString() {
-                    return String.format("{stillImage: %s}", stillImage);
+                    return "{stillImage: %s}".formatted(stillImage);
                 }
             }
 
             public static class Identifier implements Serializable {
+                @Serial
                 private static final long serialVersionUID = 1L;
 
                 private String identifier;
@@ -325,9 +337,8 @@ public class LinkedIn2ProfilePicture implements Serializable {
 
                 @Override
                 public String toString() {
-                    return String.format(
-                            "{identifier: %s, file: %s, index: %d, mediaType: %s, identifierType: %s, identifierExpiresInSeconds: %d}",
-                            identifier, file, index, mediaType, identifierType, identifierExpiresInSeconds);
+                    return "{identifier: %s, file: %s, index: %d, mediaType: %s, identifierType: %s, identifierExpiresInSeconds: %d}".formatted(
+                        identifier, file, index, mediaType, identifierType, identifierExpiresInSeconds);
                 }
             }
 
@@ -370,8 +381,8 @@ public class LinkedIn2ProfilePicture implements Serializable {
 
             @Override
             public String toString() {
-                return String.format("{artifact: %s, authorizationMethod: %s, data: %s, identifiers: %s}", artifact, authorizationMethod,
-                        data, Arrays.asList(identifiers));
+                return "{artifact: %s, authorizationMethod: %s, data: %s, identifiers: %s}".formatted(artifact, authorizationMethod,
+                    data, Arrays.asList(identifiers));
             }
         }
 
@@ -396,7 +407,7 @@ public class LinkedIn2ProfilePicture implements Serializable {
 
         @Override
         public String toString() {
-            return String.format("{paging: %s, elements: %s}", paging, Arrays.asList(elements));
+            return "{paging: %s, elements: %s}".formatted(paging, Arrays.asList(elements));
         }
     }
 
@@ -422,7 +433,7 @@ public class LinkedIn2ProfilePicture implements Serializable {
 
     @Override
     public String toString() {
-        return String.format("{displayImage: %s, displayImage~: %s}", displayImage, displayImageTilde);
+        return "{displayImage: %s, displayImage~: %s}".formatted(displayImage, displayImageTilde);
     }
 
     public static <T> T[] deepCopy(T[] array) {

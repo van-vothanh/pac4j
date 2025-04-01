@@ -74,7 +74,7 @@ public class DirectCasClient extends DirectClient<TokenCredentials> {
             final String loginUrl = configuration.computeFinalLoginUrl(context);
 
             final Optional<TokenCredentials> credentials = getCredentialsExtractor().extract(context);
-            if (!credentials.isPresent()) {
+            if (credentials.isEmpty()) {
                 // redirect to the login page
                 final String redirectionUrl = CommonUtils.constructRedirectUrl(loginUrl, CasConfiguration.SERVICE_PARAMETER,
                         callbackUrl, configuration.isRenew(), false, null);

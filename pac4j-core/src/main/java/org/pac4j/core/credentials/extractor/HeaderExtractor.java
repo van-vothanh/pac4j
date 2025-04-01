@@ -60,9 +60,9 @@ public class HeaderExtractor implements CredentialsExtractor<TokenCredentials> {
         CommonHelper.assertNotNull("prefixHeader", this.prefixHeader);
 
         Optional<String> header = context.getRequestHeader(this.headerName);
-        if (!header.isPresent()) {
+        if (header.isEmpty()) {
             header = context.getRequestHeader(this.headerName.toLowerCase());
-            if (!header.isPresent()) {
+            if (header.isEmpty()) {
                 return Optional.empty();
             }
         }

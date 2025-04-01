@@ -84,9 +84,9 @@ public class OidcExtractor implements CredentialsExtractor<OidcCredentials> {
                 throw new TechnicalException(e);
             }
 
-            if (response instanceof AuthenticationErrorResponse) {
+            if (response instanceof AuthenticationErrorResponse errorResponse) {
                 logger.error("Bad authentication response, error={}",
-                    ((AuthenticationErrorResponse) response).getErrorObject());
+                    errorResponse.getErrorObject());
                 return Optional.empty();
             }
 

@@ -2,6 +2,8 @@ package org.pac4j.cas.profile;
 
 import org.pac4j.core.profile.CommonProfile;
 
+import java.io.Serial;
+
 /**
  * This is {@link CasRestProfile} that represents
  * the CAS TGT when it's obtained via the rest api.
@@ -11,6 +13,7 @@ import org.pac4j.core.profile.CommonProfile;
  */
 public final class CasRestProfile extends CommonProfile {
 
+    @Serial
     private static final long serialVersionUID = -1688563185891330018L;
     private static final String TGT_KEY = "$tgt_key";
 
@@ -43,8 +46,8 @@ public final class CasRestProfile extends CommonProfile {
             return false;
         }
 
-        return obj instanceof CasRestProfile
-            && (obj == this || getTicketGrantingTicketId().equals(((CasRestProfile) obj).getTicketGrantingTicketId()));
+        return obj instanceof CasRestProfile crp
+            && (obj == this || getTicketGrantingTicketId().equals(crp.getTicketGrantingTicketId()));
 
     }
 }

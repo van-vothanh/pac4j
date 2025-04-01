@@ -2,6 +2,8 @@ package org.pac4j.oauth.profile;
 
 import org.pac4j.core.profile.CommonProfile;
 
+import java.io.Serial;
+
 /**
  * This class is the base OAuth 2.0 profile, extending from the base {@link org.pac4j.core.profile.CommonProfile}. It deals with the OAuth
  * access token.
@@ -11,6 +13,7 @@ import org.pac4j.core.profile.CommonProfile;
  */
 public class OAuth20Profile extends CommonProfile {
 
+    @Serial
     private static final long serialVersionUID = -2313972372691233648L;
 
     private transient static final String ACCESS_TOKEN = "access_token";

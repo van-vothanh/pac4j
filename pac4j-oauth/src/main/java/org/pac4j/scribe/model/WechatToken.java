@@ -4,6 +4,8 @@ import org.pac4j.core.util.CommonHelper;
 
 import com.github.scribejava.core.model.OAuth2AccessToken;
 
+import java.io.Serial;
+
 /**
  * Wechat token extra.
  * <p>More info at: <a href=
@@ -15,6 +17,7 @@ import com.github.scribejava.core.model.OAuth2AccessToken;
  */
 public class WechatToken extends OAuth2AccessToken {
 
+    @Serial
     private static final long serialVersionUID = -4657457530761699382L;
     private String openid;
     private String unionid;

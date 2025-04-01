@@ -53,7 +53,7 @@ public class LocalCachingAuthenticator<T extends Credentials> extends Initializa
         init();
 
         Optional<CommonProfile> optProfile = this.store.get(credentials);
-        if (!optProfile.isPresent()) {
+        if (optProfile.isEmpty()) {
             logger.debug("No cached credentials found. Delegating authentication to {}...", delegate);
             delegate.validate(credentials, context);
             final CommonProfile profile = credentials.getUserProfile();
@@ -71,8 +71,8 @@ public class LocalCachingAuthenticator<T extends Credentials> extends Initializa
             this.store = new GuavaStore<>(cacheSize, timeout, timeUnit);
         }
 
-        if (delegate instanceof InitializableObject) {
-            ((InitializableObject) delegate).init();
+        if (delegate instanceof InitializableObject object) {
+            object.init();
         }
     }
 

@@ -2,6 +2,7 @@ package org.pac4j.core.credentials;
 
 import org.pac4j.core.profile.CommonProfile;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -12,6 +13,7 @@ import java.io.Serializable;
  */
 public abstract class Credentials implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 4864923514027378583L;
 
     private CommonProfile userProfile = null;

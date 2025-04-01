@@ -1,5 +1,6 @@
 package org.pac4j.oauth.profile.foursquare;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -9,7 +10,8 @@ import java.io.Serializable;
  * @since 1.5.0
  */
 public class FoursquareUserFriend implements Serializable {
-    
+
+    @Serial
     private static final long serialVersionUID = 8954533489873703341L;
 
     private String id;

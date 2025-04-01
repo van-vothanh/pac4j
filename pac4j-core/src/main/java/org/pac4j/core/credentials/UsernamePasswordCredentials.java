@@ -3,6 +3,8 @@ package org.pac4j.core.credentials;
 import org.pac4j.core.util.Pac4jConstants;
 import org.pac4j.core.util.CommonHelper;
 
+import java.io.Serial;
+
 /**
  * This class represents a username and a password credentials
  *
@@ -11,6 +13,7 @@ import org.pac4j.core.util.CommonHelper;
  */
 public class UsernamePasswordCredentials extends Credentials {
 
+    @Serial
     private static final long serialVersionUID = -7229878989627796565L;
 
     private String username;

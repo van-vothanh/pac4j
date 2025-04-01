@@ -2,6 +2,8 @@ package org.pac4j.scribe.model;
 
 import com.github.scribejava.core.model.OAuth2AccessToken;
 
+import java.io.Serial;
+
 /**
  * Weibo token extra.
  * <p>More info at: <a href="http://open.weibo.com/wiki/Oauth2/access_token">Oauth2/access token</a></p>
@@ -11,6 +13,7 @@ import com.github.scribejava.core.model.OAuth2AccessToken;
  */
 public class WeiboToken extends OAuth2AccessToken {
 
+    @Serial
     private static final long serialVersionUID = 1489916603771001585L;
     private String uid;
 

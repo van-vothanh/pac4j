@@ -52,7 +52,7 @@ public class IndirectKerberosClient extends IndirectClient<KerberosCredentials> 
             // retrieve credentials
             credentials = getCredentialsExtractor().extract(context);
             logger.debug("kerberos credentials : {}", credentials);
-            if (!credentials.isPresent()) {
+            if (credentials.isEmpty()) {
                 throw UnauthorizedAction.INSTANCE;
             }
             // validate credentials

@@ -2,6 +2,8 @@ package org.pac4j.oauth.profile.hiorgserver;
 
 import org.pac4j.oauth.profile.OAuth20Profile;
 
+import java.io.Serial;
+
 /**
  * This class is the user profile for HiOrg-Server with appropriate getters. It
  * is returned by the {@link org.pac4j.oauth.client.HiOrgServerClient}.
@@ -11,6 +13,7 @@ import org.pac4j.oauth.profile.OAuth20Profile;
  */
 public class HiOrgServerProfile extends OAuth20Profile {
 
+    @Serial
     private static final long serialVersionUID = 1889864079390590548L;
 
     @Override

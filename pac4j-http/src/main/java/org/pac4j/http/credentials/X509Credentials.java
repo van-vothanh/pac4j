@@ -3,6 +3,7 @@ package org.pac4j.http.credentials;
 import org.pac4j.core.credentials.Credentials;
 import org.pac4j.core.util.CommonHelper;
 
+import java.io.Serial;
 import java.security.cert.X509Certificate;
 import java.util.Objects;
 
@@ -14,6 +15,7 @@ import java.util.Objects;
  */
 public class X509Credentials extends Credentials {
 
+    @Serial
     private static final long serialVersionUID = 2733744949087200768L;
 
     private final X509Certificate certificate;

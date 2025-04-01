@@ -33,8 +33,7 @@ public class DefaultCallbackClientFinder implements ClientFinder {
         final List<Client<? extends Credentials>> indirectClients = new ArrayList<>();
 
         for (final Client client : clients.findAllClients()) {
-            if (client instanceof IndirectClient) {
-                final IndirectClient indirectClient = (IndirectClient) client;
+            if (client instanceof IndirectClient indirectClient) {
                 indirectClients.add(client);
                 indirectClient.init();
                 if (indirectClient.getCallbackUrlResolver().matches(indirectClient.getName(), context)) {

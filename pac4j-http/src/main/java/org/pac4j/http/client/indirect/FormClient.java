@@ -83,7 +83,7 @@ public class FormClient extends IndirectClient<UsernamePasswordCredentials> {
             // retrieve credentials
             credentials = getCredentialsExtractor().extract(context);
             logger.debug("usernamePasswordCredentials: {}", credentials);
-            if (!credentials.isPresent()) {
+            if (credentials.isEmpty()) {
                 throw handleInvalidCredentials(context, username, "Username and password cannot be blank -> return to the form with error",
                     MISSING_FIELD_ERROR);
             }

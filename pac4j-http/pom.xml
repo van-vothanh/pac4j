@@ -11,6 +11,9 @@
     <artifactId>pac4j-http</artifactId>
     <packaging>jar</packaging>
     <name>pac4j for HTTP protocol</name>
+  <properties>
+    <java.version>21</java.version>
+  </properties>
 
     <dependencies>
         <dependency>

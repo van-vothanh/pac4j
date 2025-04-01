@@ -87,7 +87,7 @@ public final class RunOkClient extends RunClient {
                 TEST_FIRST_NAME + " " + TEST_LAST_NAME,
                 TEST_PROFILE_ID,
                 Gender.MALE,
-                new Locale(TEST_LOCALE),
+            Locale.of(TEST_LOCALE),
                 TEST_PROFILE_PICTURE_URL,
                 OkProfile.BASE_PROFILE_URL + TEST_PROFILE_ID,
                 TEST_LOCATION);

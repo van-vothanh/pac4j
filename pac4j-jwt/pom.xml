@@ -14,6 +14,7 @@
 
     <properties>
         <bcprov.version>1.68</bcprov.version>
+    <java.version>21</java.version>
     </properties>
 
     <dependencies>

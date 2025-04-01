@@ -1,5 +1,6 @@
 package org.pac4j.oauth.profile.linkedin2;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Arrays;
 
@@ -11,12 +12,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 * @since 3.8.0
 */
 public class LinkedIn2ProfileEmails implements Serializable {
+    @Serial
     private static final long serialVersionUID = 100L;
  
     public static class Email implements Serializable {
+        @Serial
         private static final long serialVersionUID = 1L;
 
         public static class HandleTilde implements Serializable {
+            @Serial
             private static final long serialVersionUID = 1L;
 
             private String emailAddress;
@@ -31,7 +35,7 @@ public class LinkedIn2ProfileEmails implements Serializable {
 
             @Override
             public String toString() {
-                return String.format("{emailAddress: %s}", emailAddress);
+                return "{emailAddress: %s}".formatted(emailAddress);
             }
         }
 
@@ -57,7 +61,7 @@ public class LinkedIn2ProfileEmails implements Serializable {
 
         @Override
         public String toString() {
-            return String.format("{handle: %s, handle~: %s}", handle, handleTilde);
+            return "{handle: %s, handle~: %s}".formatted(handle, handleTilde);
         }
     }
 
@@ -73,6 +77,6 @@ public class LinkedIn2ProfileEmails implements Serializable {
 
     @Override
     public String toString() {
-        return String.format("{elements: %s}", Arrays.asList(elements));
+        return "{elements: %s}".formatted(Arrays.asList(elements));
     }
 }

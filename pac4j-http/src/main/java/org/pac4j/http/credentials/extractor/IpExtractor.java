@@ -50,7 +50,7 @@ public class IpExtractor implements CredentialsExtractor<TokenCredentials> {
             }
         }
 
-        if (!ip.isPresent()) {
+        if (ip.isEmpty()) {
             return Optional.empty();
         }
 

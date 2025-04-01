@@ -1,5 +1,6 @@
 package org.pac4j.oauth.profile.strava;
 
+import java.io.Serial;
 import java.net.URI;
 import java.util.Date;
 import java.util.List;
@@ -17,6 +18,7 @@ import org.pac4j.oauth.profile.OAuth20Profile;
  */
 public class StravaProfile extends OAuth20Profile {
 
+    @Serial
     private static final long serialVersionUID = 995023712830997358L;
 
     private static final String STRAVA_PROFILE_BASE_URL = "http://www.strava.com/athletes/";

@@ -25,11 +25,11 @@ public abstract class AbstractEncryptionConfiguration extends InitializableObjec
     public String encrypt(final JWT jwt) {
         init();
 
-        if (jwt instanceof SignedJWT) {
+        if (jwt instanceof SignedJWT wT) {
             // Create JWE object with signed JWT as payload
             final JWEObject jweObject = new JWEObject(
                     new JWEHeader.Builder(this.algorithm, this.method).contentType("JWT").build(),
-                    new Payload((SignedJWT) jwt));
+                    new Payload(wT));
 
             try {
                 // Perform encryption

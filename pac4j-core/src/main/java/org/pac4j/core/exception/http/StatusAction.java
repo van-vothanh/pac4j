@@ -1,5 +1,7 @@
 package org.pac4j.core.exception.http;
 
+import java.io.Serial;
+
 /**
  * An HTTP action with just a specific status.
  *
@@ -8,6 +10,7 @@ package org.pac4j.core.exception.http;
  */
 public class StatusAction extends HttpAction {
 
+    @Serial
     private static final long serialVersionUID = -1512800910066851787L;
 
     public StatusAction(final int code) {

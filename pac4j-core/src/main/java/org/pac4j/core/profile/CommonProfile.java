@@ -3,6 +3,7 @@ package org.pac4j.core.profile;
 import org.pac4j.core.util.Pac4jConstants;
 import org.pac4j.core.profile.definition.CommonProfileDefinition;
 
+import java.io.Serial;
 import java.net.URI;
 import java.util.Locale;
 
@@ -14,6 +15,7 @@ import java.util.Locale;
  */
 public class CommonProfile extends BasicUserProfile {
 
+    @Serial
     private static final long serialVersionUID = -1856159870249261877L;
 
     public CommonProfile() {

@@ -2,6 +2,7 @@ package org.pac4j.oauth.profile.wordpress;
 
 import org.pac4j.oauth.profile.OAuth20Profile;
 
+import java.io.Serial;
 import java.net.URI;
 
 /**
@@ -12,7 +13,8 @@ import java.net.URI;
  * @since 1.1.0
  */
 public class WordPressProfile extends OAuth20Profile {
-    
+
+    @Serial
     private static final long serialVersionUID = 6790248892408246089L;
 
     @Override

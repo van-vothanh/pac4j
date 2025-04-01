@@ -8,6 +8,7 @@ import org.pac4j.core.exception.TechnicalException;
 import org.pac4j.core.profile.jwt.AbstractJwtProfile;
 import org.pac4j.oidc.client.OidcClient;
 
+import java.io.Serial;
 import java.net.URI;
 import java.text.ParseException;
 import java.time.Instant;
@@ -22,6 +23,7 @@ import java.util.Date;
  */
 public class OidcProfile extends AbstractJwtProfile {
 
+    @Serial
     private static final long serialVersionUID = -52855988661742374L;
 
     public OidcProfile() { }

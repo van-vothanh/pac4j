@@ -52,7 +52,7 @@ public class DigestAuthExtractor implements CredentialsExtractor<DigestCredentia
     @Override
     public Optional<DigestCredentials> extract(WebContext context) {
         final Optional<TokenCredentials> credentials = this.extractor.extract(context);
-        if (!credentials.isPresent()) {
+        if (credentials.isEmpty()) {
             return Optional.empty();
         }
 

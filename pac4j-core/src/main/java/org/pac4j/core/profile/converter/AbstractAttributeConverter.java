@@ -22,8 +22,7 @@ public abstract class AbstractAttributeConverter<T extends Object> implements At
         if (attribute != null) {
             if (clazz.isAssignableFrom(attribute.getClass())) {
                 t = (T) attribute;
-            } else if (attribute instanceof List) {
-                final List l = (List) attribute;
+            } else if (attribute instanceof List l) {
                 if (l.size() > 0) {
                     final Object element = l.get(0);
                     if (clazz.isAssignableFrom(element.getClass())) {

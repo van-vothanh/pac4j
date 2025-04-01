@@ -13,6 +13,7 @@
     <name>pac4j: Java web security via OAuth protocol</name>
 
     <properties>
+    <java.version>21</java.version>
         <scribe.version>7.1.1</scribe.version>
     </properties>
 

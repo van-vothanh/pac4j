@@ -2,6 +2,8 @@ package org.pac4j.core.exception.http;
 
 import org.pac4j.core.context.HttpConstants;
 
+import java.io.Serial;
+
 /**
  * An unauthorized HTTP action.
  *
@@ -11,6 +13,7 @@ import org.pac4j.core.context.HttpConstants;
 public class UnauthorizedAction extends HttpAction {
 
     public static final UnauthorizedAction INSTANCE = new UnauthorizedAction();
+    @Serial
     private static final long serialVersionUID = -7291712846651414978L;
 
     protected UnauthorizedAction() {

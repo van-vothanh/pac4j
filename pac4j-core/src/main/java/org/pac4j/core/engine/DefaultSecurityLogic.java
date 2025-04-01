@@ -113,7 +113,7 @@ public class DefaultSecurityLogic<R, C extends WebContext> extends AbstractExcep
                     boolean updated = false;
                     // loop on all clients searching direct ones to perform authentication
                     for (final Client currentClient : currentClients) {
-                        if (currentClient instanceof DirectClient) {
+                        if (currentClient instanceof DirectClient client) {
                             LOGGER.debug("Performing authentication for direct client: {}", currentClient);
 
                             final Optional<Credentials> credentials = currentClient.getCredentials(context);
@@ -123,7 +123,7 @@ public class DefaultSecurityLogic<R, C extends WebContext> extends AbstractExcep
                                 LOGGER.debug("profile: {}", profile);
                                 if (profile.isPresent()) {
                                     final boolean saveProfileInSession = profileStorageDecision.mustSaveProfileInSession(context,
-                                        currentClients, (DirectClient) currentClient, profile.get());
+                                        currentClients, client, profile.get());
                                     LOGGER.debug("saveProfileInSession: {} / multiProfile: {}", saveProfileInSession, multiProfile);
                                     manager.save(saveProfileInSession, profile.get(), multiProfile);
                                     updated = true;

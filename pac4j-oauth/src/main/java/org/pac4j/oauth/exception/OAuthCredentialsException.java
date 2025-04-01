@@ -2,6 +2,7 @@ package org.pac4j.oauth.exception;
 
 import org.pac4j.core.exception.CredentialsException;
 
+import java.io.Serial;
 import java.util.*;
 
 /**
@@ -11,7 +12,8 @@ import java.util.*;
  * @since 1.3.0
  */
 public class OAuthCredentialsException extends CredentialsException {
-    
+
+    @Serial
     private static final long serialVersionUID = -3540979749535811079L;
     
     public static final String ERROR = "error";

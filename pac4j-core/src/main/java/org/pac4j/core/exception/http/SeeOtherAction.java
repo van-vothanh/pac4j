@@ -2,6 +2,8 @@ package org.pac4j.core.exception.http;
 
 import org.pac4j.core.context.HttpConstants;
 
+import java.io.Serial;
+
 /**
  * A "See Other" HTTP action.
  *
@@ -10,6 +12,7 @@ import org.pac4j.core.context.HttpConstants;
  */
 public class SeeOtherAction extends RedirectionAction implements WithLocationAction {
 
+    @Serial
     private static final long serialVersionUID = 6749123580877847389L;
     private final String location;
 

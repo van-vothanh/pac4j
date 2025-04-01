@@ -36,9 +36,9 @@ public class KeycloakRolesAuthorizationGenerator implements AuthorizationGenerat
     @Override
     public Optional<UserProfile> generate(final WebContext context, final UserProfile profile) {
 
-        if (profile instanceof KeycloakOidcProfile) {
+        if (profile instanceof KeycloakOidcProfile oidcProfile) {
             try {
-                final JWT jwt = SignedJWT.parse(((KeycloakOidcProfile) profile).getAccessToken().getValue());
+                final JWT jwt = SignedJWT.parse(oidcProfile.getAccessToken().getValue());
                 final JWTClaimsSet jwtClaimsSet = jwt.getJWTClaimsSet();
 
                 final Map<String, Object> realmRolesJsonObject = jwtClaimsSet.getJSONObjectClaim("realm_access");

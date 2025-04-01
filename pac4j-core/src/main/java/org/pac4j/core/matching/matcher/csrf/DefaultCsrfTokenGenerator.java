@@ -16,10 +16,10 @@ public class DefaultCsrfTokenGenerator implements CsrfTokenGenerator {
     @Override
     public String get(final WebContext context) {
         Optional<String> token = getTokenFromSession(context);
-        if (!token.isPresent()) {
+        if (token.isEmpty()) {
             synchronized (this) {
                 token = getTokenFromSession(context);
-                if (!token.isPresent()) {
+                if (token.isEmpty()) {
                     token = Optional.of(java.util.UUID.randomUUID().toString());
                     context.getSessionStore().set(context, Pac4jConstants.CSRF_TOKEN, token.get());
                 }

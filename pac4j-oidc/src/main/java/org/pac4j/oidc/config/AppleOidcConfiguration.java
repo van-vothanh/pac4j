@@ -64,7 +64,7 @@ public class AppleOidcConfiguration extends OidcConfiguration {
         CommonHelper.assertNotNull("privateKey", privateKey);
         CommonHelper.assertNotBlank("teamID", teamID);
         if (timeout.compareTo(MAX_TIMEOUT) > 0) {
-            throw new IllegalArgumentException(String.format("timeout must not be greater then %d seconds", MAX_TIMEOUT.getSeconds()));
+            throw new IllegalArgumentException("timeout must not be greater then %d seconds".formatted(MAX_TIMEOUT.getSeconds()));
         }
         if (store == null) {
             store = new GuavaStore<>(1000, (int) timeout.getSeconds(), TimeUnit.SECONDS);

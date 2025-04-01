@@ -102,8 +102,8 @@ public class LdapProfileService extends AbstractProfileService<LdapProfile> {
             if (value != null) {
                 final String key = entry.getKey();
                 final LdapAttribute ldapAttribute;
-                if (value instanceof String) {
-                    ldapAttribute = new LdapAttribute(key, (String) value);
+                if (value instanceof String string) {
+                    ldapAttribute = new LdapAttribute(key, string);
                 } else if (value instanceof List) {
                     final List<String> list = (List<String>) value;
                     ldapAttribute = new LdapAttribute(key, list.toArray(new String[list.size()]));

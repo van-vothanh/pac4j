@@ -16,14 +16,14 @@ public final class LocaleConverter extends AbstractAttributeConverter<Locale> {
 
     @Override
     protected Locale internalConvert(final Object attribute) {
-        if (attribute instanceof String) {
-            final String s = ((String) attribute).replaceAll("-", "_");
+        if (attribute instanceof String string) {
+            final String s = string.replaceAll("-", "_");
             final String[] parts = s.split("_");
             final int length = parts.length;
             if (length == 2) {
-                return new Locale(parts[0], parts[1]);
+                return Locale.of(parts[0], parts[1]);
             } else if (length == 1) {
-                return new Locale(parts[0]);
+                return Locale.of(parts[0]);
             }
         }
         return null;

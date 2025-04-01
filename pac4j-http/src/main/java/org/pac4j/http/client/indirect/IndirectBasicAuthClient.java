@@ -69,7 +69,7 @@ public class IndirectBasicAuthClient extends IndirectClient<UsernamePasswordCred
             credentials = getCredentialsExtractor().extract(context);
             logger.debug("credentials : {}", credentials);
 
-            if (!credentials.isPresent()) {
+            if (credentials.isEmpty()) {
                 throw UnauthorizedAction.INSTANCE;
             }
 

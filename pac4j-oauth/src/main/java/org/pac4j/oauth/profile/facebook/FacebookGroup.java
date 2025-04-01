@@ -1,5 +1,6 @@
 package org.pac4j.oauth.profile.facebook;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -10,6 +11,7 @@ import java.io.Serializable;
  */
 public final class FacebookGroup implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = -846266834053161809L;
 
     private String id;

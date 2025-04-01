@@ -43,10 +43,10 @@ public class DefaultSavedRequestHandler implements SavedRequestHandler {
         if (optRequestedUrl.isPresent()) {
             context.getSessionStore().set(context, Pac4jConstants.REQUESTED_URL, "");
             final Object requestedUrl = optRequestedUrl.get();
-            if (requestedUrl instanceof FoundAction) {
-                requestedAction = (FoundAction) requestedUrl;
-            } else if (requestedUrl instanceof OkAction) {
-                requestedAction = (OkAction) requestedUrl;
+            if (requestedUrl instanceof FoundAction action) {
+                requestedAction = action;
+            } else if (requestedUrl instanceof OkAction action) {
+                requestedAction = action;
             }
         }
         if (requestedAction == null) {
@@ -54,8 +54,8 @@ public class DefaultSavedRequestHandler implements SavedRequestHandler {
         }
 
         LOGGER.debug("requestedAction: {}", requestedAction.getMessage());
-        if (requestedAction instanceof FoundAction) {
-            return RedirectionActionHelper.buildRedirectUrlAction(context, ((FoundAction) requestedAction).getLocation());
+        if (requestedAction instanceof FoundAction action) {
+            return RedirectionActionHelper.buildRedirectUrlAction(context, action.getLocation());
         } else {
             return RedirectionActionHelper.buildFormPostContentAction(context, ((OkAction) requestedAction).getContent());
         }

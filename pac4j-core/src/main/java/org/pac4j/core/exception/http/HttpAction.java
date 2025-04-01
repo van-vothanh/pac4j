@@ -3,6 +3,8 @@ package org.pac4j.core.exception.http;
 import org.pac4j.core.exception.TechnicalException;
 import org.pac4j.core.util.CommonHelper;
 
+import java.io.Serial;
+
 /**
  * The HTTP action, to perform on the web context by the appropriate {@link org.pac4j.core.http.adapter.HttpActionAdapter}.
  *
@@ -11,6 +13,7 @@ import org.pac4j.core.util.CommonHelper;
  */
 public abstract class HttpAction extends TechnicalException {
 
+    @Serial
     private static final long serialVersionUID = -3959659239684160075L;
 
     protected int code;

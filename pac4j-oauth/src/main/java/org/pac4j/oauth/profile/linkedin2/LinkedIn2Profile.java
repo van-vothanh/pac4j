@@ -1,5 +1,6 @@
 package org.pac4j.oauth.profile.linkedin2;
 
+import java.io.Serial;
 import java.net.URI;
 
 import org.pac4j.core.util.CommonHelper;
@@ -15,6 +16,7 @@ import org.pac4j.oauth.profile.linkedin2.LinkedIn2ProfilePicture.DisplayImageTil
  * @author Vassilis Virvilis
  */
 public class LinkedIn2Profile extends OAuth20Profile {
+    @Serial
     private static final long serialVersionUID = 100L;
 
     public String getLocalizedFirstName() {

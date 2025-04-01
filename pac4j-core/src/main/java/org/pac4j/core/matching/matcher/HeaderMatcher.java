@@ -32,7 +32,7 @@ public class HeaderMatcher implements Matcher {
         CommonHelper.assertNotBlank("headerName", headerName);
 
         final Optional<String> headerValue = context.getRequestHeader(this.headerName);
-        final boolean headerNull = expectedValue == null && !headerValue.isPresent();
+        final boolean headerNull = expectedValue == null && headerValue.isEmpty();
         final boolean headerMatches = headerValue.isPresent() && pattern != null && pattern.matcher(headerValue.get()).matches();
         return headerNull || headerMatches;
     }

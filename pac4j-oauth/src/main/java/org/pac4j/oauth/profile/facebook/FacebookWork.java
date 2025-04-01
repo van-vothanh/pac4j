@@ -1,5 +1,6 @@
 package org.pac4j.oauth.profile.facebook;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -16,6 +17,7 @@ import static org.pac4j.core.util.CommonHelper.newDate;
  */
 public final class FacebookWork implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = -5698634125512204910L;
 
     private FacebookObject employer;

@@ -83,8 +83,8 @@ public class Clients extends InitializableObject {
                 throw new TechnicalException("Duplicate name in clients: " + name);
             }
             _clients.put(lowerTrimmedName, client);
-            if (client instanceof IndirectClient) {
-                updateIndirectClient((IndirectClient) client);
+            if (client instanceof IndirectClient indirectClient) {
+                updateIndirectClient(indirectClient);
             }
             final BaseClient baseClient = (BaseClient) client;
             if (!authorizationGenerators.isEmpty()) {

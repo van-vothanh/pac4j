@@ -1,5 +1,6 @@
 package org.pac4j.oauth.profile.facebook;
 
+import java.io.Serial;
 import java.net.URI;
 import java.util.Date;
 import java.util.List;
@@ -17,6 +18,7 @@ import org.pac4j.oauth.profile.OAuth20Profile;
 @SuppressWarnings("unchecked")
 public class FacebookProfile extends OAuth20Profile {
 
+    @Serial
     private static final long serialVersionUID = 6339376303764855109L;
 
     @Override

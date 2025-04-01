@@ -42,7 +42,7 @@ public class ParameterExtractor implements CredentialsExtractor<TokenCredentials
         }
 
         final Optional<String> value = context.getRequestParameter(this.parameterName);
-        if (!value.isPresent()) {
+        if (value.isEmpty()) {
             return Optional.empty();
         }
 

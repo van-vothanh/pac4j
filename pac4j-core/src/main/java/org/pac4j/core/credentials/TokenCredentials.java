@@ -2,6 +2,8 @@ package org.pac4j.core.credentials;
 
 import org.pac4j.core.util.CommonHelper;
 
+import java.io.Serial;
+
 /**
  * This credentials represents a token.
  *
@@ -10,6 +12,7 @@ import org.pac4j.core.util.CommonHelper;
  */
 public class TokenCredentials extends Credentials {
 
+    @Serial
     private static final long serialVersionUID = -4270718634364817595L;
 
     private String token;

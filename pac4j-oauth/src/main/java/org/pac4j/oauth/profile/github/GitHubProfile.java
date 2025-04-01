@@ -1,5 +1,6 @@
 package org.pac4j.oauth.profile.github;
 
+import java.io.Serial;
 import java.net.URI;
 import java.util.Date;
 
@@ -13,7 +14,8 @@ import org.pac4j.oauth.profile.OAuth20Profile;
  * @since 1.1.0
  */
 public class GitHubProfile extends OAuth20Profile {
-    
+
+    @Serial
     private static final long serialVersionUID = -8030906034414268058L;
 
     @Override

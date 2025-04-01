@@ -34,14 +34,13 @@ public class DateConverter extends AbstractAttributeConverter<Date> {
     
     @Override
     protected Date internalConvert(final Object attribute) {
-        if (attribute instanceof String) {
+        if (attribute instanceof String s) {
             SimpleDateFormat simpleDateFormat;
             if (this.locale == null) {
                 simpleDateFormat = new SimpleDateFormat(this.format);
             } else {
                 simpleDateFormat = new SimpleDateFormat(this.format, this.locale);
             }
-            final String s = (String) attribute;
             try {
                 return simpleDateFormat.parse(s);
             } catch (final ParseException e) {

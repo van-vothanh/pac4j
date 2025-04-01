@@ -1,5 +1,6 @@
 package org.pac4j.oauth.profile.foursquare;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.List;
  */
 public class FoursquareUserFriendGroup implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = -8744746298033480494L;
 
     private int count;

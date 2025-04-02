@@ -2,6 +2,8 @@ package org.pac4j.oauth.credentials;
 
 import org.pac4j.core.credentials.Credentials;
 
+import java.io.Serial;
+
 /**
  * This class represents an OAuth credentials for OAuth 1.0 and 2.0: a request token, a token and a verifier.
  *
@@ -10,6 +12,7 @@ import org.pac4j.core.credentials.Credentials;
  */
 public abstract class OAuthCredentials extends Credentials {
 
+    @Serial
     private static final long serialVersionUID = -7705033802712382951L;
 
     @Override

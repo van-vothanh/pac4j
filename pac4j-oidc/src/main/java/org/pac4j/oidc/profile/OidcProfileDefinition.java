@@ -60,16 +60,16 @@ public class OidcProfileDefinition<P extends OidcProfile> extends CommonProfileD
         primary(ACCESS_TOKEN, attribute -> {
             if (attribute instanceof AccessToken) {
                 return attribute;
-            } else if (attribute instanceof String) {
-                return new BearerAccessToken((String) attribute);
+            } else if (attribute instanceof String string) {
+                return new BearerAccessToken(string);
             }
             return null;
         });
         primary(REFRESH_TOKEN, attribute -> {
             if (attribute instanceof RefreshToken) {
                 return attribute;
-            } else if (attribute instanceof String) {
-                return new RefreshToken((String) attribute);
+            } else if (attribute instanceof String string) {
+                return new RefreshToken(string);
             }
             return null;
         });

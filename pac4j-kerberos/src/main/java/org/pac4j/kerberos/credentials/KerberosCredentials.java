@@ -3,6 +3,7 @@ package org.pac4j.kerberos.credentials;
 import org.pac4j.core.credentials.Credentials;
 import org.pac4j.core.util.CommonHelper;
 
+import java.io.Serial;
 import java.nio.charset.StandardCharsets;
 
 /**
@@ -16,6 +17,7 @@ public class KerberosCredentials extends Credentials {
     /**
      *
      */
+    @Serial
     private static final long serialVersionUID = -4264156105410684508L;
 
     public KerberosCredentials(byte[] kerberosTicket) {

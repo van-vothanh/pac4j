@@ -157,15 +157,13 @@ public class JwtAuthenticator extends ProfileDefinitionAware<JwtProfile> impleme
             } else {
 
                 SignedJWT signedJWT = null;
-                if (jwt instanceof SignedJWT) {
-                    signedJWT = (SignedJWT) jwt;
+                if (jwt instanceof SignedJWT wT) {
+                    signedJWT = wT;
                 }
 
                 // encrypted?
-                if (jwt instanceof EncryptedJWT) {
+                if (jwt instanceof EncryptedJWT encryptedJWT) {
                     logger.debug("JWT is encrypted");
-
-                    final EncryptedJWT encryptedJWT = (EncryptedJWT) jwt;
                     boolean found = false;
                     final JWEHeader header = encryptedJWT.getHeader();
                     final JWEAlgorithm algorithm = header.getAlgorithm();

@@ -1,5 +1,7 @@
 package org.pac4j.core.exception;
 
+import java.io.Serial;
+
 /**
  * This class represents an expected exception occurring during credentials retrieval.
  *
@@ -8,6 +10,7 @@ package org.pac4j.core.exception;
  */
 public class CredentialsException extends TechnicalException {
 
+    @Serial
     private static final long serialVersionUID = 6013115966613706463L;
 
     public CredentialsException(final String message) {

@@ -21,8 +21,7 @@ public class JwtProfileDefinition extends CommonProfileDefinition<JwtProfile> {
     @Override
     public void convertAndAdd(final CommonProfile profile, final AttributeLocation attributeLocation,
                               final String name, final Object value) {
-        if (value instanceof JSONObject) {
-            JSONObject jsonObject = (JSONObject) value;
+        if (value instanceof JSONObject jsonObject) {
             jsonObject.forEach((key, objectValue) -> super.convertAndAdd(profile, attributeLocation, key, objectValue));
             if (keepNestedAttributes) {
                 super.convertAndAdd(profile, attributeLocation, name, value);

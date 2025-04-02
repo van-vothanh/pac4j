@@ -1,5 +1,6 @@
 package org.pac4j.oauth.profile.weibo;
 
+import java.io.Serial;
 import java.net.URI;
 import java.util.Locale;
 
@@ -15,6 +16,7 @@ import org.pac4j.oauth.profile.OAuth20Profile;
  */
 public class WeiboProfile extends OAuth20Profile {
 
+    @Serial
     private static final long serialVersionUID = -7486869356444327783L;
 
     @Override

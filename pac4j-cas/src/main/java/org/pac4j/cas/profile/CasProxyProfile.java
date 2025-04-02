@@ -2,6 +2,8 @@ package org.pac4j.cas.profile;
 
 import org.jasig.cas.client.authentication.AttributePrincipal;
 
+import java.io.Serial;
+
 /**
  * <p>This class is the user profile for sites using CAS protocol with proxy capabilities.</p>
  * <p>It is returned by the {@link org.pac4j.cas.client.CasClient} coupled with the {@link org.pac4j.cas.client.CasProxyReceptor}.</p>
@@ -14,7 +16,8 @@ import org.jasig.cas.client.authentication.AttributePrincipal;
  * @since 1.4.0
  */
 public class CasProxyProfile extends CasProfile {
-    
+
+    @Serial
     private static final long serialVersionUID = 4956675835922254493L;
 
     protected AttributePrincipal attributePrincipal = null;

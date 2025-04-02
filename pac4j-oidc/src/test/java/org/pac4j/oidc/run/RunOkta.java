@@ -57,7 +57,7 @@ public class RunOkta extends RunClient {
         assertTrue(ProfileHelper.isTypedIdOf(profile.getTypedId(), OidcProfile.class));
         assertNotNull(profile.getIdTokenString());
         assertCommonProfile(profile, getLogin(), "Test", "pac4j", "Test pac4j", "testpac4j@gmail.com",
-                Gender.UNSPECIFIED, new Locale("en", "US"), null, null, "America/Los_Angeles");
+                Gender.UNSPECIFIED, Locale.of("en", "US"), null, null, "America/Los_Angeles");
         assertTrue((Boolean) profile.getAttribute("email_verified"));
         assertNotNull(profile.getAttribute("at_hash"));
         assertEquals("1", profile.getAttribute("ver").toString());

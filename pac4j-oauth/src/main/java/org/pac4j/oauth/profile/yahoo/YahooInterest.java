@@ -1,5 +1,6 @@
 package org.pac4j.oauth.profile.yahoo;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 
@@ -11,6 +12,7 @@ import java.util.List;
  */
 public final class YahooInterest implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 3613314161531695788L;
 
     private List<String> declaredInterests;

@@ -14,10 +14,10 @@ public final class LongConverter extends AbstractAttributeConverter<Long> {
 
     @Override
     protected Long internalConvert(final Object attribute) {
-        if (attribute instanceof Integer) {
-            return Long.valueOf((Integer) attribute);
-        } else if (attribute instanceof String) {
-            return Long.parseLong((String) attribute);
+        if (attribute instanceof Integer integer) {
+            return Long.valueOf(integer);
+        } else if (attribute instanceof String string) {
+            return Long.parseLong(string);
         }
         return null;
     }

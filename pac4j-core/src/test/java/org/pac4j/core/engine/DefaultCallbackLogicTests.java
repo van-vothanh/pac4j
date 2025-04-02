@@ -174,8 +174,8 @@ public final class DefaultCallbackLogicTests implements TestsConstants {
         assertEquals(1, profiles.size());
         assertNotEquals(newSessionId, originalSessionId);
         assertEquals(code, action.getCode());
-        if (action instanceof SeeOtherAction) {
-            assertEquals(PAC4J_URL, ((SeeOtherAction) action).getLocation());
+        if (action instanceof SeeOtherAction otherAction) {
+            assertEquals(PAC4J_URL, otherAction.getLocation());
         } else {
             assertEquals(PAC4J_URL, ((FoundAction) action).getLocation());
         }

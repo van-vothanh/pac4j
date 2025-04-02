@@ -1,5 +1,6 @@
 package org.pac4j.oauth.profile.yahoo;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Locale;
 
@@ -11,6 +12,7 @@ import java.util.Locale;
  */
 public final class YahooAddress implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 5415315569181241541L;
 
     private Integer id;

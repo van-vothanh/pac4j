@@ -2,6 +2,8 @@ package org.pac4j.oidc.profile.azuread;
 
 import org.pac4j.oidc.profile.OidcProfile;
 
+import java.io.Serial;
+
 /**
  * <p>This class is the user profile for Azure AD (using OpenID Connect protocol) with appropriate getters.</p>
  * <p>It is returned by the {@link org.pac4j.oidc.client.AzureAdClient}.</p>
@@ -11,6 +13,7 @@ import org.pac4j.oidc.profile.OidcProfile;
  */
 public class AzureAdProfile extends OidcProfile {
 
+    @Serial
     private static final long serialVersionUID = -8659029290353954198L;
 
     public String getIdp() {

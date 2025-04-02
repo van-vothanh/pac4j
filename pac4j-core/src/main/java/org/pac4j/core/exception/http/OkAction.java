@@ -2,6 +2,8 @@ package org.pac4j.core.exception.http;
 
 import org.pac4j.core.context.HttpConstants;
 
+import java.io.Serial;
+
 /**
  * An OK HTTP action.
  *
@@ -10,6 +12,7 @@ import org.pac4j.core.context.HttpConstants;
  */
 public class OkAction extends RedirectionAction implements WithContentAction {
 
+    @Serial
     private static final long serialVersionUID = -8842651379112280831L;
     private final String content;
 

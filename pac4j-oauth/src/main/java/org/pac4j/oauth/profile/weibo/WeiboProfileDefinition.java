@@ -216,9 +216,9 @@ public class WeiboProfileDefinition extends OAuth20ProfileDefinition<WeiboProfil
     @Override
     public String getProfileUrl(final OAuth2AccessToken accessToken,
                                 final OAuth20Configuration configuration) {
-        if (accessToken instanceof WeiboToken) {
+        if (accessToken instanceof WeiboToken token) {
             return CommonHelper.addParameter("https://api.weibo.com/2/users/show.json", "uid",
-                ((WeiboToken) accessToken).getUid());
+                token.getUid());
         } else
             throw new OAuthException("Token in getProfileUrl is not an WeiboToken");
     }

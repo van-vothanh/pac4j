@@ -2,6 +2,7 @@ package org.pac4j.oauth.profile.paypal;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -12,6 +13,7 @@ import java.io.Serializable;
  */
 public class PayPalAddress implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = -6856575643675582895L;
 
     @JsonProperty("street_address")

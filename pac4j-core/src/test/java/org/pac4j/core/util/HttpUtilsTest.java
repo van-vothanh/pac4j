@@ -38,7 +38,7 @@ public class HttpUtilsTest {
 
             //evaluating test
             String actual = HttpUtils.buildHttpErrorMessage(connectionMock);
-            String expected = String.format("(%d) %s[%s]", testConnectionResponseCode, testConnResponseMessage, testResponseBody);
+            String expected = "(%d) %s[%s]".formatted(testConnectionResponseCode, testConnResponseMessage, testResponseBody);
             Assert.assertTrue(expected.equals(actual));
         }
 

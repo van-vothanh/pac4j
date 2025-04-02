@@ -18,8 +18,8 @@ public class UrlConverter extends AbstractAttributeConverter<URI> {
 
     @Override
     protected URI internalConvert(final Object attribute) {
-        if (attribute instanceof String) {
-            final String s = ((String) attribute).replaceAll("\\/", "/");
+        if (attribute instanceof String string) {
+            final String s = string.replaceAll("\\/", "/");
             return CommonHelper.asURI(s);
         }
         return null;

@@ -1,5 +1,7 @@
 package org.pac4j.core.exception;
 
+import java.io.Serial;
+
 /**
  * Exception for bad credentials.
  *
@@ -8,6 +10,7 @@ package org.pac4j.core.exception;
  */
 public class BadCredentialsException extends CredentialsException {
 
+    @Serial
     private static final long serialVersionUID = 106849753775292065L;
 
     public BadCredentialsException(final String message) {

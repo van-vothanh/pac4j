@@ -3,6 +3,8 @@ package org.pac4j.kerberos.profile;
 import org.ietf.jgss.GSSContext;
 import org.pac4j.core.profile.CommonProfile;
 
+import java.io.Serial;
+
 /**
  * Represents a user profile based on a Kerberos authentication.
  *
@@ -11,6 +13,7 @@ import org.pac4j.core.profile.CommonProfile;
  */
 public class KerberosProfile extends CommonProfile {
 
+    @Serial
     private static final long serialVersionUID = -1388563485891552197L;
     private GSSContext gssContext = null;
 

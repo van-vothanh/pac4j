@@ -1,5 +1,6 @@
 package org.pac4j.oauth.profile.yahoo;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -15,6 +16,7 @@ import static org.pac4j.core.util.CommonHelper.newDate;
  */
 public final class YahooDisclosure implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 1592628531426071633L;
 
     private String acceptance;

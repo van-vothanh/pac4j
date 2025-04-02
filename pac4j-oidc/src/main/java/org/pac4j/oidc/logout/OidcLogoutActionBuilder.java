@@ -42,10 +42,10 @@ public class OidcLogoutActionBuilder implements LogoutActionBuilder {
     public Optional<RedirectionAction> getLogoutAction(final WebContext context, final UserProfile currentProfile,
                                                        final String targetUrl) {
         final String logoutUrl = configuration.findLogoutUrl();
-        if (CommonHelper.isNotBlank(logoutUrl) && currentProfile instanceof OidcProfile) {
+        if (CommonHelper.isNotBlank(logoutUrl) && currentProfile instanceof OidcProfile profile) {
             try {
                 final URI endSessionEndpoint = new URI(logoutUrl);
-                final JWT idToken = ((OidcProfile) currentProfile).getIdToken();
+                final JWT idToken = profile.getIdToken();
 
                 LogoutRequest logoutRequest;
                 if (CommonHelper.isNotBlank(targetUrl)) {

@@ -8,6 +8,8 @@ import org.pac4j.core.credentials.Credentials;
 import com.nimbusds.oauth2.sdk.AuthorizationCode;
 import org.pac4j.core.util.CommonHelper;
 
+import java.io.Serial;
+
 /**
  * Credentials containing the authorization code sent by the OpenID Connect server.
  *
@@ -17,6 +19,7 @@ import org.pac4j.core.util.CommonHelper;
  */
 public class OidcCredentials extends Credentials {
 
+    @Serial
     private static final long serialVersionUID = 6772331801527223938L;
 
     private AuthorizationCode code;

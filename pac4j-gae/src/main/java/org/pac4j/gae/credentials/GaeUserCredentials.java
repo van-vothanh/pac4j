@@ -5,6 +5,8 @@ import org.pac4j.core.credentials.Credentials;
 import com.google.appengine.api.users.User;
 import org.pac4j.core.util.CommonHelper;
 
+import java.io.Serial;
+
 /**
  * Credential for Google App Engine.
  *
@@ -13,6 +15,7 @@ import org.pac4j.core.util.CommonHelper;
  */
 public class GaeUserCredentials extends Credentials {
 
+    @Serial
     private static final long serialVersionUID = -135519596194113906L;
 
     private User user;

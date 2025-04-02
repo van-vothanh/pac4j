@@ -23,17 +23,21 @@ public class WeiboJsonExtractorTest {
 
     private final ObjectMapper mapper = new ObjectMapper();
 
-    private String responseOk = " {\n" +
-        "       \"access_token\": \"ACCESS_TOKEN\",\n" +
-        "       \"expires_in\": 1234,\n" +
-        "       \"remind_in\":\"798114\",\n" +
-        "       \"uid\":\"12341234\"\n" +
-        " }";
-    private String responseError = " {\n" +
-        "       \"access_token\": \"ACCESS_TOKEN\",\n" +
-        "       \"expires_in\": 1234,\n" +
-        "       \"remind_in\":\"798114\"\n" +
-        " }";
+    private String responseOk = """
+         {
+               "access_token": "ACCESS_TOKEN",
+               "expires_in": 1234,
+               "remind_in":"798114",
+               "uid":"12341234"
+         }\
+        """;
+    private String responseError = """
+         {
+               "access_token": "ACCESS_TOKEN",
+               "expires_in": 1234,
+               "remind_in":"798114"
+         }\
+        """;
 
     @Test
     public void createTokenHasUid() throws IOException {
@@ -41,8 +45,8 @@ public class WeiboJsonExtractorTest {
             123, null, null, mapper.readTree(responseOk), responseOk);
         Assert.assertEquals("ACCESS_TOKEN", accessToken.getAccessToken());
         assertTrue(accessToken instanceof WeiboToken);
-        if (accessToken instanceof WeiboToken) {
-            Assert.assertEquals("12341234", ((WeiboToken) accessToken).getUid());
+        if (accessToken instanceof WeiboToken token) {
+            Assert.assertEquals("12341234", token.getUid());
         }
     }
 

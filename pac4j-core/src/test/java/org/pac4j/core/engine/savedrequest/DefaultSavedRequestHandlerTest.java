@@ -18,15 +18,17 @@ import static org.junit.Assert.*;
  */
 public class DefaultSavedRequestHandlerTest implements TestsConstants {
 
-    private static final String FORM_DATA = "<html>\n" +
-        "<body>\n" +
-        "<form action=\"http://www.pac4j.org/test.html\" name=\"f\" method=\"post\">\n" +
-        "<input type='hidden' name=\"key\" value=\"value\" />\n" +
-        "<input value='POST' type='submit' />\n" +
-        "</form>\n" +
-        "<script type='text/javascript'>document.forms['f'].submit();</script>\n" +
-        "</body>\n" +
-        "</html>\n";
+    private static final String FORM_DATA = """
+        <html>
+        <body>
+        <form action="http://www.pac4j.org/test.html" name="f" method="post">
+        <input type='hidden' name="key" value="value" />
+        <input value='POST' type='submit' />
+        </form>
+        <script type='text/javascript'>document.forms['f'].submit();</script>
+        </body>
+        </html>
+        """;
 
     private DefaultSavedRequestHandler handler = new DefaultSavedRequestHandler();
 

@@ -1,5 +1,6 @@
 package org.pac4j.oauth.profile.yahoo;
 
+import java.io.Serial;
 import java.net.URI;
 import java.util.Date;
 import java.util.List;
@@ -17,7 +18,8 @@ import org.pac4j.oauth.profile.OAuth10Profile;
  */
 @SuppressWarnings("unchecked")
 public class YahooProfile extends OAuth10Profile {
-    
+
+    @Serial
     private static final long serialVersionUID = 791758805376191144L;
 
     @Override

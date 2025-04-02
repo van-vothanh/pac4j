@@ -2,6 +2,7 @@ package org.pac4j.oauth.profile.casoauthwrapper;
 
 import org.pac4j.oauth.profile.OAuth20Profile;
 
+import java.io.Serial;
 import java.util.Date;
 
 /**
@@ -12,7 +13,8 @@ import java.util.Date;
  * @since 1.3.0
  */
 public class CasOAuthWrapperProfile extends OAuth20Profile {
-    
+
+    @Serial
     private static final long serialVersionUID = 1347249873352825528L;
 
     public Boolean isFromNewLogin() {

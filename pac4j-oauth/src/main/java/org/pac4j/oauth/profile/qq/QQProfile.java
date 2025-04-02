@@ -1,5 +1,6 @@
 package org.pac4j.oauth.profile.qq;
 
+import java.io.Serial;
 import java.net.URI;
 
 import org.pac4j.core.profile.Gender;
@@ -15,6 +16,7 @@ import org.pac4j.oauth.profile.OAuth20Profile;
  */
 public class QQProfile extends OAuth20Profile {
 
+    @Serial
     private static final long serialVersionUID = -9147667878709777823L;
 
     @Override

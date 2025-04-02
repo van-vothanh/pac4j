@@ -1,5 +1,6 @@
 package org.pac4j.oauth.profile.vk;
 
+import java.io.Serial;
 import java.net.URI;
 import java.util.Date;
 import java.util.Locale;
@@ -17,11 +18,12 @@ import org.pac4j.oauth.profile.OAuth20Profile;
  */
 public class VkProfile extends OAuth20Profile {
 
+    @Serial
     private static final long serialVersionUID = -7889265305949082980L;
 
     @Override
     public String getDisplayName() {
-        return String.format("%s %s", getFirstName(), getLastName()).trim();
+        return "%s %s".formatted(getFirstName(), getLastName()).trim();
     }
 
     @Override
@@ -39,7 +41,7 @@ public class VkProfile extends OAuth20Profile {
 
     @Override
     public URI getProfileUrl() {
-        return CommonHelper.asURI(String.format("https://vk.com/id%s", getId()));
+        return CommonHelper.asURI("https://vk.com/id%s".formatted(getId()));
     }
 
     @Override

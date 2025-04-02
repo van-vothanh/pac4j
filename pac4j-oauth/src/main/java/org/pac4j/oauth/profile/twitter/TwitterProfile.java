@@ -1,5 +1,6 @@
 package org.pac4j.oauth.profile.twitter;
 
+import java.io.Serial;
 import java.net.URI;
 import java.util.Date;
 import java.util.Locale;
@@ -15,7 +16,8 @@ import org.pac4j.oauth.profile.OAuth10Profile;
  * @since 1.1.0
  */
 public class TwitterProfile extends OAuth10Profile {
-    
+
+    @Serial
     private static final long serialVersionUID = -6473348745856820192L;
 
     @Override

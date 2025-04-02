@@ -1,5 +1,6 @@
 package org.pac4j.oauth.profile.facebook;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -16,6 +17,7 @@ import static org.pac4j.core.util.CommonHelper.newDate;
  */
 public final class FacebookPhoto implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = -1230468571423177489L;
 
     private String id;

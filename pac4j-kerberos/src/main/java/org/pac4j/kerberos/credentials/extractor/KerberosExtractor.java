@@ -20,7 +20,7 @@ public class KerberosExtractor implements CredentialsExtractor<KerberosCredentia
     @Override
     public Optional<KerberosCredentials> extract(final WebContext context) {
         final Optional<String> optHeader = context.getRequestHeader(HttpConstants.AUTHORIZATION_HEADER);
-        if (!optHeader.isPresent()) {
+        if (optHeader.isEmpty()) {
             return Optional.empty();
         }
 

@@ -3,6 +3,7 @@ package org.pac4j.oauth.profile.foursquare;
 import org.pac4j.core.util.CommonHelper;
 import org.pac4j.oauth.profile.OAuth20Profile;
 
+import java.io.Serial;
 import java.net.URI;
 
 /**
@@ -13,7 +14,8 @@ import java.net.URI;
  * @since 1.5.0
  */
 public class FoursquareProfile extends OAuth20Profile {
-    
+
+    @Serial
     private static final long serialVersionUID = 8919122885219420820L;
 
     public String getBio() {

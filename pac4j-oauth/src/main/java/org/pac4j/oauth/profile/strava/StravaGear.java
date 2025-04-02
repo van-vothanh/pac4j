@@ -2,6 +2,7 @@ package org.pac4j.oauth.profile.strava;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -12,6 +13,7 @@ import java.io.Serializable;
  */
 public class StravaGear implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = -5738356602119292294L;
 
     private String id;

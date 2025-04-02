@@ -4,6 +4,8 @@ import org.pac4j.core.credentials.TokenCredentials;
 import org.pac4j.core.exception.TechnicalException;
 import org.pac4j.core.util.CommonHelper;
 
+import java.io.Serial;
+
 /**
  * <p>This credentials is retrieved from a HTTP request.</p>
  * <p>A user profile can be attached with the credentials if it has been created by a
@@ -16,6 +18,7 @@ import org.pac4j.core.util.CommonHelper;
  */
 public class DigestCredentials extends TokenCredentials {
 
+    @Serial
     private static final long serialVersionUID = -5130296967270874521L;
     private String username;
 

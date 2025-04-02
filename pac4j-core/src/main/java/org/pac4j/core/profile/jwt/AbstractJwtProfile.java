@@ -2,6 +2,7 @@ package org.pac4j.core.profile.jwt;
 
 import org.pac4j.core.profile.CommonProfile;
 
+import java.io.Serial;
 import java.util.Date;
 import java.util.List;
 
@@ -13,6 +14,7 @@ import java.util.List;
  */
 public abstract class AbstractJwtProfile extends CommonProfile {
 
+    @Serial
     private static final long serialVersionUID = -6146872796913837767L;
 
     public String getSubject() {

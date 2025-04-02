@@ -2,6 +2,8 @@ package org.pac4j.http.profile;
 
 import org.pac4j.core.profile.CommonProfile;
 
+import java.io.Serial;
+
 /**
  * REST profile.
  *
@@ -9,5 +11,6 @@ import org.pac4j.core.profile.CommonProfile;
  * @since 2.1.0
  */
 public class RestProfile extends CommonProfile {
+    @Serial
     private static final long serialVersionUID = 4169018490675981350L;
 }
